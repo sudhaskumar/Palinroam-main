@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    >
+    <!-- The fill color -->
+    <solid android:color="@color/rating_circlr_color" />
+    <!-- Just to add a border -->
+    <stroke
+        android:color="#FFFFFF"
+        android:width="4dp"
+        />
+</shape>

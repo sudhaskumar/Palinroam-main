@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_headertext_size">16sp</dimen>
+    <dimen name="activity_social_login_text_size">22sp</dimen>
+    <dimen name="activity_verfication_header_text_size">24sp</dimen>
+    <dimen name="activity_verfication_small_header_text_size">14sp</dimen>
+    <dimen name="socialnetwork_butom">50dp</dimen>
+
+
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+    <dimen name="heading_text_size">18sp</dimen>
+</resources>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="40dp"
+    android:background="@color/list_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mbarc.palinroam.activities.FilterActivity"
+    tools:showIn="@layout/activity_filter">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/icons">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="6dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_text"
+                android:text="@string/time"
+                android:textSize="@dimen/activity_headertext_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/list_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/secondary_text"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="120dp"
+                        android:background="@color/secondary_text" />
+
+                    <LinearLayout
+                        android:layout_width="164dp"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/morning_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@mipmap/morningicon" />
+
+                            <com.mbarc.palinroam.views.RobotoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/morning_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/secondary_text" />
+
+                        <LinearLayout
+                            android:id="@+id/evening_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@mipmap/eveningicon" />
+
+                            <com.mbarc.palinroam.views.RobotoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/evening_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="120dp"
+                        android:background="@color/secondary_text" />
+
+                    <LinearLayout
+                        android:layout_width="165dp"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/afternoon_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@mipmap/afternoonicon" />
+
+                            <com.mbarc.palinroam.views.RobotoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/afternoon_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/secondary_text" />
+
+                        <LinearLayout
+                            android:id="@+id/night_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@mipmap/midnighticon" />
+
+                            <com.mbarc.palinroam.views.RobotoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/night_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="120dp"
+                        android:background="@color/secondary_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+
+                    android:background="@color/secondary_text" />
+
+            </LinearLayout>
+
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="@string/price"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/activity_headertext_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/list_background" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:background="@color/certain_high"
+                    android:gravity="center">
+
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:background="@color/certain_medium">
+
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medium"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:background="@color/certain_low">
+
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/high"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Certainity -->
+
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="@string/certainty_text"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/activity_headertext_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/list_background" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:background="@color/certain_high"
+                    android:gravity="center">
+
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/high"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:background="@color/certain_medium">
+
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medium"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:background="@color/certain_low">
+
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- High rated riders only-->
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="@string/high_rated_rider_text"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/activity_headertext_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/list_background" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

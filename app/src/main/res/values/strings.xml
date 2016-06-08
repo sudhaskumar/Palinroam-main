@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Palinroam</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password </string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="forget_password">Forgot Password  ?</string>
+    <string name="social_login_text">Or Login  with</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+    <!-- Strings related to signup -->
+    <string name="prompt_name">Name</string>
+    <string name="prompt_comfirm_password">Confirm Password</string>
+    <string name="error_invalid_username">This Username is too short</string>
+    <string name="action_sign_up_short">Sign Up</string>
+    <string name="action_sign_up_agreement">Agree to terms and conditions</string>
+
+
+    <!-- Login and Signup Title text... -->
+    <string name="login_name">Login</string>
+    <string name="signup_name">Sign Up</string>
+
+    <!-- Verification Activity Texts... -->
+    <string name="verification_header_name">Verify your ID</string>
+    <string name="verification_small_header_name">Provide an offical ID</string>
+    <string name="govt_button_text">Government ID</string>
+    <string name="govt_verify_button_text">verify</string>
+
+    <!-- Welcome Activity Texts... -->
+    <string name="welcome_page_text">Welcome Name !</string>
+    <string name="welcome_page_second_text">Complete your profile  -  and off we go!</string>
+    <string name="verfy_mobile_text">Verify mobile number</string>
+    <string name="welcome_page_mobile_editext_hint">+91 - </string>
+    <string name="welcome_page_otp_editext_hint"> Your OTP </string>
+    <string name="title_activity_find_ride">FindRideActivity</string>
+    <!-- Search Activity Texts... -->
+    <string name="find_ride_leave_from">Leaving from</string>
+    <string name="find_ride_search_button">Search</string>
+    <string name="find_ride_going_to">Going to</string>
+    <string name="findride_text">FIND RIDE</string>
+    <string name="offerride_text">OFFER RIDE</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="offerride_next_button">Next</string>
+    <string name="offer_ride_returntrip_text">Round trip</string>
+    <string name="dep_date">Departure date</string>
+    <string name="return_date">Return date</string>
+    <string name="title_activity_list_of_ride">ListOfRideActivity</string>
+
+    <!-- list of ride Activity Texts... -->
+    <string name="friends_text">24 Friends</string>
+    <string name="mutual_text">24 Mutual</string>
+    <string name="verified_member_text">Verified Member</string>
+    <string name="female_only_text">Female only</string>
+    <string name="certainty_text">Certainty</string>
+    <string name="name_text">Sudhas kumar </string>
+    <string name="age_text"> 24 Age </string>
+    <string name="name_seat_text">/Seat</string>
+    <string name="sample_amt">300</string>
+    <string name="no_seat_text">2 Seats</string>
+    <string name="demo_date_text">Sun 04 Oct</string>
+    <string name="demo_time_text">04:30 am</string>
+    <string name="low_certainty">Low Certainty</string>
+    <string name="medium_certainty">Medium Certainty</string>
+    <string name="high_certainty">High Certainty</string>
+    <string name="title_activity_filter">FilterActivity</string>
+
+    <!-- Filter activity -->
+    <string name="morning_text"> 6:00 am - 11:59 am </string>
+    <string name="afternoon_text"> 12:00 pm - 5:59 pm </string>
+    <string name="evening_text"> 6:00 pm - 11:59 pm </string>
+    <string name="night_text"> 12:00 am - 5:59 am </string>
+    <string name="price">Price</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+    <string name="filter_button_text">Apply Filters</string>
+    <string name="high_rated_rider_text">High rated riders only</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+
+    <!-- User Profile  activity Text -->
+    <string name="about_text"> About</string>
+    <string name="update_info_text"> Update Info</string>
+    <string name="upcoming_rides_text"> Upcoming Rides</string>
+    <string name="connect_friends_text"> Connect your friends</string>
+    <string name="demo_date_and_time"> Sun 04 Jul - 06:00 pm</string>
+    <string name="demo_city1"> Coimbatore</string>
+    <string name="demo_city2"> Hyderabad</string>
+    <string name="share_text"> Share</string>
+</resources>

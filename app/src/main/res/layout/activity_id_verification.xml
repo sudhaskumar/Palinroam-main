@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/homeimage"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mbarc.palinroam.activities.IdVerificationActivity">
+
+
+    <!-- Verification  progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="90dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verification_header_name"
+                android:textColor="@color/icons"
+                android:textSize="@dimen/activity_verfication_header_text_size" />
+
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verification_small_header_name"
+                android:textColor="@color/icons"
+                android:textSize="@dimen/activity_verfication_small_header_text_size" />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/govt_button_text"
+                android:textColor="@color/icons" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_indicator_color"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/activity_social_login_text_size"
+        android:text="@string/govt_verify_button_text"/>
+</RelativeLayout>

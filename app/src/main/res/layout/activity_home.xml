@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/homeimage"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activities.HomeActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:tabSelectedTextColor="@color/icons"
+        app:tabTextColor="@color/divider"
+        app:tabIndicatorColor="@color/tab_indicator_color"
+       />
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+        android:layout_below="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <com.mbarc.palinroam.views.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/activity_social_login_text_size"
+            android:text="@string/social_login_text"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/socialnetwork_butom"
+                android:layout_height="@dimen/socialnetwork_butom"
+                android:id="@+id/facebook_login"
+                android:layout_marginRight="40dp"
+                android:src="@mipmap/face_login"/>
+            <ImageView
+                android:layout_width="@dimen/socialnetwork_butom"
+                android:layout_height="@dimen/socialnetwork_butom"
+                android:id="@+id/gplus_login"
+                android:layout_marginRight="40dp"
+                android:src="@mipmap/google_login"/>
+            <ImageView
+                android:layout_width="@dimen/socialnetwork_butom"
+                android:layout_height="@dimen/socialnetwork_butom"
+                android:id="@+id/twitter_login"
+                android:src="@mipmap/twitter_login"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
