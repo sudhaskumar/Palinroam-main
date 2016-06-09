@@ -20,26 +20,35 @@ import butterknife.BindString;
 import butterknife.ButterKnife;
 
 public class FindRideActivity extends AppCompatActivity {
-    @Bind(R.id.toolbar)Toolbar toolbar;
-    @Bind(R.id.tabs)TabLayout tabLayout;
-    @Bind(R.id.viewpager)ViewPager viewPager;
-    @BindString(R.string.findride_text)String findRide;
-    @BindString(R.string.offerride_text)String offerRide;
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+    @Bind(R.id.tabs)
+    TabLayout tabLayout;
+    @Bind(R.id.viewpager)
+    ViewPager viewPager;
+    @BindString(R.string.findride_text)
+    String findRide;
+    @BindString(R.string.offerride_text)
+    String offerRide;
     HomeViewPageAdapter pageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_ride);
-        setSupportActionBar(toolbar);
         ButterKnife.bind(this);
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+        toolbar.inflateMenu(R.menu.find_ride_menu);
+        toolbar.setNavigationIcon(getResources().getDrawable(R.mipmap.navication));
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
     }
+
     private void setupViewPager(ViewPager viewPager) {
-        pageAdapter=new HomeViewPageAdapter(getSupportFragmentManager());
-        pageAdapter.addFragment(new FindRideFragment(),findRide);
-        pageAdapter.addFragment(new OfferRideFragment(),offerRide);
+        pageAdapter = new HomeViewPageAdapter(getSupportFragmentManager());
+        pageAdapter.addFragment(new FindRideFragment(), findRide);
+        pageAdapter.addFragment(new OfferRideFragment(), offerRide);
         viewPager.setAdapter(pageAdapter);
     }
 

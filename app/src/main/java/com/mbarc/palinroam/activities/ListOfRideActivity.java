@@ -30,6 +30,7 @@ public class ListOfRideActivity extends AppCompatActivity {
     @BindString(R.string.high_certainty) String highCertainty;
     @BindString(R.string.low_certainty) String lowCertainty;
     @BindString(R.string.medium_certainty) String mediumCertainty;
+    FindRideListAdapter findRideListAdapter;
     @OnClick(R.id.fab)
     public void filterAction(View view)
     {
@@ -43,7 +44,7 @@ public class ListOfRideActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         listOfRide.setLayoutManager(new LinearLayoutManager(this));
-        FindRideListAdapter findRideListAdapter=new FindRideListAdapter(ListOfRideActivity.this,fill_with_data());
+        findRideListAdapter =new FindRideListAdapter(ListOfRideActivity.this,fill_with_data());
         listOfRide.setAdapter(findRideListAdapter);
         findRideListAdapter.notifyDataSetChanged();
 

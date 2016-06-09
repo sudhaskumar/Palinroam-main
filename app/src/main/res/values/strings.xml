@@ -54,7 +54,7 @@
 
     <!-- list of ride Activity Texts... -->
     <string name="friends_text">24 Friends</string>
-    <string name="mutual_text">24 Mutual</string>
+    <string name="mutual_text">24 Mutual Friends</string>
     <string name="verified_member_text">Verified Member</string>
     <string name="female_only_text">Female only</string>
     <string name="certainty_text">Certainty</string>
