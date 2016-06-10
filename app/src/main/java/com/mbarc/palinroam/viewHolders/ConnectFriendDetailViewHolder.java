@@ -1,5 +1,6 @@
 package com.mbarc.palinroam.viewHolders;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Admin on 6/3/2016.
+ * Created by sudhas on 6/3/2016.
  */
 public class ConnectFriendDetailViewHolder extends RecyclerView.ViewHolder {
     @Bind(R.id.connect_friend_pro_name)public TextView profileNameTextView;

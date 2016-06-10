@@ -92,4 +92,33 @@
     <string name="demo_city1"> Coimbatore</string>
     <string name="demo_city2"> Hyderabad</string>
     <string name="share_text"> Share</string>
+
+    <!-- About Activity Text -->
+    <string name="personal_information_text"> Personal Information</string>
+    <string name="vehicle_details_text"> Vehicle Details</string>
+    <string name="preferences"> Perferences</string>
+    <string name="demo_mailid"> sudhasmca91@gmail.com</string>
+    <string name="demo_phone"> +91 987654321</string>
+    <string name="demo_gender"> Male</string>
+    <string name="demo_birthdate"> 16/07/1991</string>
+    <string name="demo_address">17-A, North Boag Road, T Nagar, Chennai, Tamil Nadu 600017</string>
+    <string name="demo_car_model"> Audi Q5- 2.0 TFSI Quattro S-Tronic DC/T</string>
+    <string name="demo_about_car"> Comfort Level - Luxury</string>
+
+    <!-- EditProfile Activity Text -->
+    <string name="view_your_profile_text"> View your profile</string>
+    <string name="address_text"> Address </string>
+    <string name="add_preference_text"> + Add preferences</string>
+    <string name="add_car_text"> + Add car</string>
+    <string name="street_text"> House no and street name</string>
+    <string name="city_text"> City</string>
+    <string name="phone_text"> Mobile</string>
+    <string name="genter_text"> Gender</string>
+    <string name="birthdate_text"> Birthdate (dd/mm/yy)</string>
+    <string name="zip_code_text"> Zip code</string>
+    <string name="country_text"> Country</string>
+    <string name="id_proof_text"> Your ID proof</string>
+    <string name="add_id_proof"> + Add your ID proof</string>
+    <string name="car_details_text"> Car Details</string>
+    
 </resources>

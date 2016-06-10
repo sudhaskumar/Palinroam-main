@@ -32,7 +32,7 @@ public class UserProfileActivity extends AppCompatActivity {
     LinearLayout editProfileLayout;
     @OnClick(R.id.edit_profile_layout)
     public void editAction() {
-        startActivity(new Intent(UserProfileActivity.this, FindRideActivity.class));
+        startActivity(new Intent(UserProfileActivity.this, AboutActivity.class));
     }
 
     ConnectFriendListAdapter connectFriendListAdapter;

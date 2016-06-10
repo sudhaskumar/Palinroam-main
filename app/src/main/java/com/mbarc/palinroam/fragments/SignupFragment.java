@@ -83,7 +83,7 @@ public class SignupFragment extends Fragment{
                 }
                 Log.d("REGISTRATION_ERROR",response.toString());
                 Utils.showProgress(false,getActivity(),mProgressView,mSignUpFormView);
-                startActivity(new Intent(getActivity(), UserProfileActivity.class));
+                startActivity(new Intent(getActivity(), FindRideActivity.class));
             }
         }, new Response.ErrorListener() {
             @Override
