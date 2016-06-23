@@ -12,6 +12,7 @@ import android.view.View;
 import com.mbarc.palinroam.R;
 import com.mbarc.palinroam.adapter.FindRideListAdapter;
 import com.mbarc.palinroam.data.FindRideListData;
+import com.mbarc.palinroam.views.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,13 +45,22 @@ public class ListOfRideActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         listOfRide.setLayoutManager(new LinearLayoutManager(this));
-        findRideListAdapter =new FindRideListAdapter(ListOfRideActivity.this,fill_with_data());
+        findRideListAdapter =new FindRideListAdapter(ListOfRideActivity.this,fill_with_dummy_data());
         listOfRide.setAdapter(findRideListAdapter);
         findRideListAdapter.notifyDataSetChanged();
+        listOfRide.addOnItemTouchListener(
+                new RecyclerItemClickListener(ListOfRideActivity.this, new   RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        // TODO Handle item click
+                       startActivity(new Intent(ListOfRideActivity.this,RideTaggedDetailView.class));
+                    }
+                })
+        );
 
     }
 
-    public List<FindRideListData> fill_with_data() {
+    public List<FindRideListData> fill_with_dummy_data() {
 
         List<FindRideListData> findRideListData = new ArrayList<>();
         findRideListData.add(new FindRideListData("Sudhaskumar","24 Age","216 Friends","34 Mutual","500","Fri 16 Jul","05:45 pm","4.9","3 Seat",highCertainty));

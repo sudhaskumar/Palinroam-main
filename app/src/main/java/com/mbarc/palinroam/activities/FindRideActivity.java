@@ -14,6 +14,7 @@ import com.mbarc.palinroam.R;
 import com.mbarc.palinroam.adapter.HomeViewPageAdapter;
 import com.mbarc.palinroam.fragments.FindRideFragment;
 import com.mbarc.palinroam.fragments.OfferRideFragment;
+import com.mbarc.palinroam.util.SessionManager;
 
 
 import butterknife.Bind;
@@ -32,6 +33,7 @@ public class FindRideActivity extends AppCompatActivity {
     @BindString(R.string.offerride_text)
     String offerRide;
     HomeViewPageAdapter pageAdapter;
+    SessionManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class FindRideActivity extends AppCompatActivity {
         toolbar.inflateMenu(R.menu.find_ride_menu);
         toolbar.setNavigationIcon(getResources().getDrawable(R.mipmap.navication));
         setupViewPager(viewPager);
+        manager = new SessionManager();
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -71,9 +74,26 @@ public class FindRideActivity extends AppCompatActivity {
         if (id == R.id.menu_user_profile) {
             startActivity(new Intent(FindRideActivity.this,UserProfileActivity.class));
             return true;
+        }else if(id == R.id.menu_logout)
+        {
+            manager.setPreferences(FindRideActivity.this, "status", "0");
+            finish();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+        System.exit(0);
     }
 
 }

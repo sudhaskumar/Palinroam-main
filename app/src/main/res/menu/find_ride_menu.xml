@@ -8,19 +8,27 @@
         android:title="User Profile"
         android:orderInCategory="100"
         app:showAsAction="always"/>
-
+    <item android:id="@+id/car_profile"
+        android:icon="@mipmap/car"
+        android:title="Friends Details"
+        android:orderInCategory="200"
+        app:showAsAction="always"/>
     <item android:id="@+id/menu_friends_profile"
         android:icon="@mipmap/friendsprofileicon"
         android:title="Friends Details"
-        android:orderInCategory="200"
+        android:orderInCategory="300"
         app:showAsAction="always"/>
 
     <item android:id="@+id/menu_notification"
         android:icon="@mipmap/notificationicon"
         android:title="Notification"
-        android:orderInCategory="300"
+        android:orderInCategory="400"
         app:showAsAction="always"/>
 
+    <item android:id="@+id/menu_logout"
+        android:title="Logout"
+        android:orderInCategory="400"
+        app:showAsAction="never"/>
 
 
 </menu>

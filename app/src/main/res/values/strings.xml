@@ -54,11 +54,19 @@
 
     <!-- list of ride Activity Texts... -->
     <string name="friends_text">24 Friends</string>
+    <string name="activate_mail_text">Please verify  E-mail to activate your account </string>
+    <string name="add_friend_text">Add Friend</string>
+    <string name="co_passenger_text">Co-Passenger</string>
+    <string name="tag_friend_text">Tag Friend</string>
+    <string name="tagged_text">Tagged</string>
     <string name="mutual_text">24 Mutual Friends</string>
     <string name="verified_member_text">Verified Member</string>
+    <string name="demo_community_text">Ashok Nagar,Chennai</string>
     <string name="female_only_text">Female only</string>
+    <string name="stop_over_text">STOP - OVER</string>
     <string name="certainty_text">Certainty</string>
     <string name="name_text">Sudhas kumar </string>
+    <string name="name_has_text"> #Sudhas kumar </string>
     <string name="age_text"> 24 Age </string>
     <string name="name_seat_text">/Seat</string>
     <string name="sample_amt">300</string>
@@ -80,18 +88,24 @@
     <string name="medium">Medium</string>
     <string name="high">High</string>
     <string name="filter_button_text">Apply Filters</string>
+    <string name="join_ride_button_text">Join Sudhas</string>
     <string name="high_rated_rider_text">High rated riders only</string>
     <string name="title_activity_user_profile">UserProfileActivity</string>
 
     <!-- User Profile  activity Text -->
     <string name="about_text"> About</string>
+    <string name="demo_count_text"> 150</string>
+    <string name="trip_request_text"> Trips Requested</string>
+    <string name="successful_trips_text">Successful Trips</string>
+    <string name="cancelled_trips"> Cancelled Trips</string>
     <string name="update_info_text"> Update Info</string>
     <string name="upcoming_rides_text"> Upcoming Rides</string>
     <string name="connect_friends_text"> Connect your friends</string>
     <string name="demo_date_and_time"> Sun 04 Jul - 06:00 pm</string>
-    <string name="demo_city1"> Coimbatore</string>
-    <string name="demo_city2"> Hyderabad</string>
+    <string name="demo_city1"> Chennai</string>
+    <string name="demo_city2"> Kovilpatti</string>
     <string name="share_text"> Share</string>
+    <string name="demo_kms"> (1200 Km)</string>
 
     <!-- About Activity Text -->
     <string name="personal_information_text"> Personal Information</string>
@@ -99,10 +113,17 @@
     <string name="preferences"> Perferences</string>
     <string name="demo_mailid"> sudhasmca91@gmail.com</string>
     <string name="demo_phone"> +91 987654321</string>
+    <string name="phone_prefix"> +91 - </string>
+    <string name="hint_phone"> Enter 10 digit number</string>
     <string name="demo_gender"> Male</string>
     <string name="demo_birthdate"> 16/07/1991</string>
     <string name="demo_address">17-A, North Boag Road, T Nagar, Chennai, Tamil Nadu 600017</string>
-    <string name="demo_car_model"> Audi Q5- 2.0 TFSI Quattro S-Tronic DC/T</string>
+    <string name="demo_car_model"> Audi Q5- 2.0 TFSI (3+1)</string>
+    <string name="demo_making_date"> Make : 2016</string>
+    <string name="demo_car_spec"> Petrol, Dark grey</string>
+    <string name="feature_text"> Features :</string>
+    <string name="luggage_text"> Luggage :</string>
+    <string name="demo_comment_text">  This is a really great succinct yet fully detailed answer. Thanks for writing that up so clearly. It helped me understand how to use bundles very quickly </string>
     <string name="demo_about_car"> Comfort Level - Luxury</string>
 
     <!-- EditProfile Activity Text -->
@@ -120,5 +141,13 @@
     <string name="id_proof_text"> Your ID proof</string>
     <string name="add_id_proof"> + Add your ID proof</string>
     <string name="car_details_text"> Car Details</string>
-    
+    <string name="here_we_go_text"> Here we go !</string>
+    <string name="request_sent_text"> Your request has been sent.</string>
+    <string name="wallet_text"> you pay the rider  through wallet.</string>
+    <string name="stay_connect_text"> Stay connected - Happy journey !</string>
+    <string name="cancelation_policy_text">Cancellation : Strict</string>
+    <string name="title_activity_splash">Palinroam</string>
+
+    <string name="dummy_content">Palinroam</string>
+
 </resources>

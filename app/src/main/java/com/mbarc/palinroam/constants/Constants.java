@@ -18,4 +18,5 @@ public class Constants {
     public  static final  String  MAINURL="http://ec2-54-191-144-166.us-west-2.compute.amazonaws.com:4321/webservices-1.0.0-BUILD-SNAPSHOT/rest/user/";
     public  static final  String REGISTERATION_METHOD="register";
     public  static final  String LOGIN_METHOD="login";
+    public  static final  String GET_USER_PROFILE="getUserProfile";
 }

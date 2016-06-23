@@ -21,5 +21,7 @@
     <color name="certain_medium">#f9af2f</color>
     <color name="certain_high">#4fd98a</color>
     <color name="high_light_text_color">#58b6e0</color>
+  <color name="final_page_color">#47DAC0</color>
+    <color name="black_overlay">#66000000</color>
 
 </resources>

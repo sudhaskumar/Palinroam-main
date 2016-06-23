@@ -4,9 +4,11 @@ import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -45,6 +47,7 @@ import com.mbarc.palinroam.activities.WelcomePage;
 import com.mbarc.palinroam.constants.Constants;
 import com.mbarc.palinroam.util.BaseRequest;
 import com.mbarc.palinroam.util.JsonObjectBulider;
+import com.mbarc.palinroam.util.SessionManager;
 import com.mbarc.palinroam.util.Utils;
 
 import org.json.JSONException;
@@ -79,6 +82,10 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
     @Bind(R.id.password)
     EditText passwordEditText;
     RequestQueue requestQueue;
+    SessionManager manager;
+    Bundle bundle;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor ;
 
     @OnEditorAction(R.id.password)
     public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -90,7 +97,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
     }
 
     @OnClick(R.id.email_sign_in_button)
-    public void login() {
+    public void login(View view) {
         attemptLogin();
     }
 
@@ -109,6 +116,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         ButterKnife.bind(this, view);
         requestQueue = Volley.newRequestQueue(getActivity());
+        manager=new SessionManager();
         populateAutoComplete();
         return view;
     }
@@ -232,12 +240,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
         boolean cancel = false;
         View focusView = null;
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            passwordEditText.setError(getString(R.string.error_invalid_password));
-            focusView = passwordEditText;
-            cancel = true;
-        }
+
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
             emailAutoCompleteTextView.setError(getString(R.string.error_field_required));
@@ -246,6 +249,10 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
         } else if (!isEmailValid(email)) {
             emailAutoCompleteTextView.setError(getString(R.string.error_invalid_email));
             focusView = emailAutoCompleteTextView;
+            cancel = true;
+        } else if (!isPasswordValid(password)) {
+            passwordEditText.setError(getString(R.string.error_invalid_password));
+            focusView = passwordEditText;
             cancel = true;
         }
 
@@ -257,7 +264,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             Utils.showProgress(true, getActivity(), mProgressView, mLoginFormView);
-            authenticateUser(email,password,Utils.getIpAddress(),Utils.getDeviceId(getActivity()));
+            authenticateUser(email, password, Utils.getIpAddress(), Utils.getDeviceId(getActivity()));
         }
     }
 
@@ -271,7 +278,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
         return password.length() > 4;
     }
 
-    public void authenticateUser(String email,String password,String ipAddress,String deviceId) {
+    public void authenticateUser(String email, String password, String ipAddress, String deviceId) {
 
         JSONObject params = null;
         try {
@@ -284,19 +291,39 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
         requestQueue.add(new BaseRequest(Request.Method.POST, Constants.MAINURL + Constants.LOGIN_METHOD, params, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                if (response.toString().contains("SUCCESS")) {
-                    Utils.showProgress(false, getActivity(), mProgressView, mLoginFormView);
-                    Utils.showToast(getActivity(), "Login Successfully");
+
+                try {
+                    String errorCode=response.getJSONObject("BigHiveLoginResponse").getJSONObject("error").getString("errorCode");
+                    String errorMsg=response.getJSONObject("BigHiveLoginResponse").getJSONObject("error").getString("errorMessage");
+
+                    if(errorCode.equalsIgnoreCase("0")){
+                        Utils.showProgress(false, getActivity(), mProgressView, mLoginFormView);
+                        manager.setPreferences(getActivity(), "status", "1");
+                        String status=manager.getPreferences(getActivity(),"status");
+                        sharedPreferences =getActivity().getSharedPreferences(Constants.GET_USER_PROFILE, Context.MODE_PRIVATE);
+                        editor = sharedPreferences.edit();
+                        editor.putString("username",response.getJSONObject("BigHiveLoginResponse").getJSONObject("userDetails").getJSONObject("BigHiveUser").getJSONObject("personName").getJSONObject("PersonName").getString("firstName"));
+                        editor.apply();
+                        Log.d("status", status);
+                        Intent intent = new Intent(getActivity(), WelcomePage.class);
+                        startActivity(intent);
+                       // Utils.showToast(getActivity(), "Login Successfully");
+
+                    } else {
+                        Utils.showProgress(false, getActivity(), mProgressView, mLoginFormView);
+                        Log.d("REGISTRATION_ERROR", response.toString());
+                        Utils.showToast(getActivity(),errorMsg);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-                Log.d("REGISTRATION_ERROR", response.toString());
-                startActivity(new Intent(getActivity(),ListOfRideActivity.class));
-                Utils.showProgress(false, getActivity(), mProgressView, mLoginFormView);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Utils.showProgress(false, getActivity(), mProgressView, mLoginFormView);
                 Log.d("REGISTRATION_ERROR", error.toString());
+
             }
         }));
     }

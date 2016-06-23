@@ -1,5 +1,6 @@
 package com.mbarc.palinroam.activities;
 
+import android.content.Intent;
 import android.os.StrictMode;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.crashlytics.android.Crashlytics;
 import com.mbarc.palinroam.R;
 import com.mbarc.palinroam.adapter.HomeViewPageAdapter;
 import com.mbarc.palinroam.constants.Constants;
@@ -18,6 +20,7 @@ import com.mbarc.palinroam.util.Utils;
 import butterknife.Bind;
 import butterknife.BindString;
 import butterknife.ButterKnife;
+import io.fabric.sdk.android.Fabric;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -33,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         if (android.os.Build.VERSION.SDK_INT > 9) {
@@ -53,5 +57,16 @@ public class HomeActivity extends AppCompatActivity {
         pageAdapter.addFragment(new LoginFragment(),loginName);
         pageAdapter.addFragment(new SignupFragment(),signupName);
         viewPager.setAdapter(pageAdapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+        System.exit(0);
     }
 }

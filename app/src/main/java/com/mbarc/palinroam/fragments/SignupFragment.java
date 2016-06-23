@@ -90,6 +90,7 @@ public class SignupFragment extends Fragment{
             public void onErrorResponse(VolleyError error) {
                 Utils.showProgress(false,getActivity(),mProgressView,mSignUpFormView);
                 Log.d("REGISTRATION_ERROR",error.toString());
+                startActivity(new Intent(getActivity(), FindRideActivity.class));
             }
         }));
     }

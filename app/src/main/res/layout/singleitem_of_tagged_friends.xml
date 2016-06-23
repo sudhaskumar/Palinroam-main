@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tagged_friend_pro_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/profileimage" />
+                <ImageView
+                    android:id="@+id/delete_tagged_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_gravity="end|top"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/deleteicon" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <com.mbarc.palinroam.views.RobotoTextView
+                    android:id="@+id/tagged_friend_pro_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:singleLine="true"
+                    android:maxLength="12"
+                    android:text="@string/name_text"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <com.mbarc.palinroam.views.RobotoTextView
+                    android:id="@+id/tagged_friend_pro_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/age_text"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <com.mbarc.palinroam.views.RobotoTextView
+                android:id="@+id/tagged_friend_pro_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/mutual_text"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

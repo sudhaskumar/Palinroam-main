@@ -3,15 +3,20 @@
     android:id="@+id/footer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
     android:gravity="bottom">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/tab_indicator_color"
-        android:textColor="@color/icons"
-        android:textSize="@dimen/activity_social_login_text_size"
-        android:text="@string/filter_button_text"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/tab_indicator_color"
+            android:textColor="@color/icons"
+            android:gravity="center"
+            android:textSize="@dimen/activity_social_login_text_size"
+            android:text=""/>
+
+    </FrameLayout>
 </RelativeLayout>

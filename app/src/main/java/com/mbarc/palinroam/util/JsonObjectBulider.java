@@ -42,4 +42,15 @@ public class JsonObjectBulider {
         }
         return perNameDetails;
     }
+    public static JSONObject errorResponses(String errorCode,String errorMessage){
+        JSONObject errorJsonObj=new JSONObject();
+        try {
+            errorJsonObj.put("errorCode",errorCode);
+            errorJsonObj.put("errorMessage",errorMessage);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return errorJsonObj;
+    }
 }
