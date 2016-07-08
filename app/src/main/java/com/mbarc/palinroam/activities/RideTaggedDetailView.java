@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.mbarc.palinroam.R;
@@ -29,6 +30,12 @@ import butterknife.OnClick;
 public class RideTaggedDetailView extends AppCompatActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
+    @Bind(R.id.base_button)Button joinButton;
+    @OnClick(R.id.base_button)
+    public void joinAction()
+    {
+        startActivity(new Intent(RideTaggedDetailView.this,ThankingPageActivity.class));
+    }
     @Bind(R.id.stop_over_list)
     RecyclerView stopOverList;
     @Bind(R.id.co_passenger_list)RecyclerView coPassengerList;
@@ -77,6 +84,7 @@ public class RideTaggedDetailView extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        joinButton.setText("Join Sudhas");
         stopOverList.setLayoutManager(new LinearLayoutManager(this));
         stopOverListAdapter = new StopOverListAdapter(RideTaggedDetailView.this, fill_with_dummy_data());
         stopOverList.setAdapter(stopOverListAdapter);

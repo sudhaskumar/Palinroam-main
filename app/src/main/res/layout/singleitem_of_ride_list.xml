@@ -119,6 +119,7 @@
                                 android:layout_height="20dp"
                                 android:scaleType="centerCrop"
                                 android:layout_marginTop="3dp"
+                                android:layout_marginRight="5dp"
                                 android:src="@mipmap/verifiedmembericon"/>
                             <com.mbarc.palinroam.views.RobotoTextView
                                 android:layout_width="wrap_content"

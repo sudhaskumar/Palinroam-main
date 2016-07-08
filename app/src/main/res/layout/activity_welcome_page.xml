@@ -101,6 +101,7 @@
                     android:text="Send OTP"
                     android:background="@color/button_color"
                     android:textColor="@color/icons"
+                    android:id="@+id/send_otp"
                     />
             </LinearLayout>
             <EditText

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- offer ride progress -->
     <ProgressBar
@@ -31,10 +32,11 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="20dp"
                 android:background="@color/black"
+                android:paddingTop="5dp"
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
-                    android:id="@+id/leave_from"
+                    android:id="@+id/offer_ride_leave_from"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/find_ride_leave_from"
@@ -42,7 +44,6 @@
                     android:padding="10dp"
                     android:drawableLeft="@mipmap/sourcemapicon"
                     android:drawablePadding="5dp"
-                    android:drawableRight="@mipmap/currentlocationicon"
                     android:textColor="@color/icons"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
@@ -74,11 +75,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:paddingTop="5dp"
                 android:background="@color/black"
                 >
 
                 <AutoCompleteTextView
-                    android:id="@+id/going_to_edittext"
+                    android:id="@+id/offer_ride_going_to"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/find_ride_going_to"
@@ -106,20 +108,16 @@
                 android:layout_marginTop="2dp"
                android:background="@color/black"
                 >
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@mipmap/roundtripicon"
-                    android:padding="5dp"/>
-                <CheckBox
+                <android.support.v7.widget.AppCompatCheckBox
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_marginTop="2dp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/round_trip_checkbox"
                     android:text="@string/offer_ride_returntrip_text"
                     android:textColor="@color/icons"
-                    android:button="@null"
-                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:textSize="18sp"
+                    app:buttonTint="@color/icons"
                     />
             </LinearLayout>
 
@@ -132,6 +130,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
+                android:paddingTop="5dp"
                 android:background="@color/black">
 
                 <EditText
@@ -156,6 +155,7 @@
         android:layout_width="185dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
+        android:paddingTop="5dp"
         android:background="@color/black">
 
         <EditText
@@ -198,11 +198,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:padding="10dp"
+                        android:drawablePadding="5dp"
                         android:background="@null"
                         android:textColor="@color/icons"
                         android:hint="@string/return_date"
-                        android:imeActionId="@+id/login"
-                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:drawableLeft="@mipmap/calendericon"
                         android:imeOptions="actionUnspecified"
                         android:inputType="date"
                         android:maxLines="1"
@@ -225,8 +225,8 @@
                         android:background="@null"
                         android:textColor="@color/icons"
                         android:hint="@string/time"
-                        android:imeActionId="@+id/login"
-                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:drawableLeft="@mipmap/clockicon"
+                        android:drawablePadding="5dp"
                         android:imeOptions="actionUnspecified"
                         android:inputType="time"
                         android:maxLines="1"
@@ -238,7 +238,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/email_sign_in_button"
+                android:id="@+id/offer_ride_next_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:background="@color/tab_indicator_color"

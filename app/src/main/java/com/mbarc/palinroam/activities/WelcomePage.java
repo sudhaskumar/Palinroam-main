@@ -25,6 +25,15 @@ public class WelcomePage extends AppCompatActivity {
     String userName;
     @Bind(R.id.user_welcome_text)
     TextView userWelcomeText;
+    @Bind(R.id.send_otp)
+    Button sendotp;
+
+    @OnClick(R.id.send_otp)
+    public void sendotpmethod()
+    {
+        startActivity(new Intent(WelcomePage.this,AddCarActivity.class));
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

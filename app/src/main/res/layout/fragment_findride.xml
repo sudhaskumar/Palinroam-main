@@ -87,7 +87,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="@string/date"
+                        android:hint="@string/dep_date"
                         android:drawableLeft="@mipmap/calendericon"
                         android:drawablePadding="5dp"
                         android:editable="false"

@@ -96,6 +96,7 @@
     <string name="about_text"> About</string>
     <string name="demo_count_text"> 150</string>
     <string name="trip_request_text"> Trips Requested</string>
+    <string name="request_text">Requests</string>
     <string name="successful_trips_text">Successful Trips</string>
     <string name="cancelled_trips"> Cancelled Trips</string>
     <string name="update_info_text"> Update Info</string>
@@ -106,6 +107,10 @@
     <string name="demo_city2"> Kovilpatti</string>
     <string name="share_text"> Share</string>
     <string name="demo_kms"> (1200 Km)</string>
+    <string name="search_friend_text"> Search your friends</string>
+    <string name="import_text"> Import</string>
+    <string name="invite_policy_text"> Your contacts are safe with us ! We ll import your address \n book to Palinroam to suggest connections \n and help you. </string>
+    <string name="invite_known_palinroam"> See who you already  know on \n\t\t\t\t\t\t\t\t\t Palinroam</string>
 
     <!-- About Activity Text -->
     <string name="personal_information_text"> Personal Information</string>
@@ -125,6 +130,7 @@
     <string name="luggage_text"> Luggage :</string>
     <string name="demo_comment_text">  This is a really great succinct yet fully detailed answer. Thanks for writing that up so clearly. It helped me understand how to use bundles very quickly </string>
     <string name="demo_about_car"> Comfort Level - Luxury</string>
+    <string name="top_ride_in_city_text"> Top rides in your city</string>
 
     <!-- EditProfile Activity Text -->
     <string name="view_your_profile_text"> View your profile</string>
@@ -143,11 +149,34 @@
     <string name="car_details_text"> Car Details</string>
     <string name="here_we_go_text"> Here we go !</string>
     <string name="request_sent_text"> Your request has been sent.</string>
+    <string name="notify_message_text"> We ll notify you once your request accepted by Rider.</string>
     <string name="wallet_text"> you pay the rider  through wallet.</string>
     <string name="stay_connect_text"> Stay connected - Happy journey !</string>
     <string name="cancelation_policy_text">Cancellation : Strict</string>
     <string name="title_activity_splash">Palinroam</string>
 
-    <string name="dummy_content">Palinroam</string>
 
+    <!-- AddCarActivity Activity Text -->
+    <string name="carname_text">Swift</string>
+    <string name="carcolor_text">(Red)</string>
+    <string name="cardesc_text">Car with Air Conditioning </string>
+    <string name="edit_text">Edit</string>
+
+    <string name="dummy_content">Palinroam</string>
+    <string name="title_activity_friends_detailed">FriendsDetailedActivity</string>
+
+    <!-- Offer a ride Activity Text -->
+    <string name="price_detail_text">Price  Details</string>
+    <string name="preferred_passanger_text">Perferred Co-Passenger</string>
+    <string name="male_text">Male</string>
+    <string name="female_text">Female</string>
+    <string name="both_text">Both</string>
+    <string name="seat_text">Seat</string>
+    <string name="ride_certainity_text">Ride Certainity</string>
+    <string name="cancellation_mode_text">Cancellation Mode</string>
+    <string name="strict_text">Strict</string>
+    <string name="modurate_text">Modurate</string>
+    <string name="easy_text">Easy</string>
+    <string name="demo_route">Chennai to \n Madurai</string>
+    <string name="agreement_text">I have agreed to the terms and conditions</string>
 </resources>
