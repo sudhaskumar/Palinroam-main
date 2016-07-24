@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background"
+    android:fitsSystemWindows="true"
+    tools:context="com.mbarc.palinroam.activities.AddingNewCarActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/vehicle_image_button"
+            android:src="@mipmap/profileimage" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|top"
+            android:id="@+id/capture_Button"
+            android:src="@mipmap/updateinfoicon" />
+    </FrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="60dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/icons"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/vehicle_number_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+                            android:layout_gravity="bottom"
+                            android:paddingBottom="3dp"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicle_edittext"
+                            android:background="@color/icons"
+                            android:textSize="16sp"
+                            android:inputType="textCapCharacters"
+                            android:layout_gravity="end" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/car_make_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicle_make"
+                            android:layout_gravity="end" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/car_model_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicle_model"
+                            android:layout_gravity="end" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/car_color_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicle_color"
+                            android:layout_gravity="end" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/car_comfort_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicle_comfort"
+                            android:layout_gravity="end" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/car_seats_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:gravity="end">
+                          <ImageView
+                              android:layout_width="18dp"
+                              android:layout_height="18dp"
+                              android:src="@mipmap/minusicon"
+                              android:id="@+id/seat_minus"
+                              android:scaleType="fitCenter"/>
+                          <com.mbarc.palinroam.views.RobotoTextView
+                              android:layout_width="60dp"
+                              android:layout_height="wrap_content"
+                              android:maxLength="2"
+                              android:text="1"
+                              android:id="@+id/no_seat_text"
+                              android:gravity="center"/>
+                          <ImageView
+                              android:layout_width="18dp"
+                              android:layout_height="18dp"
+                              android:id="@+id/seat_plus"
+                              android:src="@mipmap/plusicon"
+                              android:scaleType="fitCenter"/>
+
+                      </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/wifi_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/wifi_switch" />
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/list_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:padding="5dp">
+
+                        <com.mbarc.palinroam.views.RobotoTextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/fuel_type_text"
+                            android:textColor="@color/primary_text"
+                            android:textSize="14sp"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicle_fuel_type"
+                            android:layout_gravity="end" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <!--include layout="@layout/join_ride_footer" /-->
+
+</android.support.design.widget.CoordinatorLayout>

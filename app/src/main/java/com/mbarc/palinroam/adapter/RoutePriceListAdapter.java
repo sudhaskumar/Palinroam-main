@@ -39,7 +39,7 @@ public class RoutePriceListAdapter extends RecyclerView.Adapter<RoutePriceViewHo
 
     @Override
     public void onBindViewHolder(final RoutePriceViewHolder holder, final int position) {
-        holder.ciryRouteName.setText(routePriceDataList.get(position).sourceCity + " to \n " + routePriceDataList.get(position).destinationCity);
+        holder.cityRouteName.setText(routePriceDataList.get(position).sourceCity + " to \n " + routePriceDataList.get(position).destinationCity);
         holder.routePrice.setText(" " + routePriceDataList.get(position).routeAmount);
         normalAmt = routePriceDataList.get(position).routeAmount;
         holder.plusButton.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +53,8 @@ public class RoutePriceListAdapter extends RecyclerView.Adapter<RoutePriceViewHo
         holder.minusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(normalAmt<0)
-                {
-                    normalAmt=0;
+                if (normalAmt < 0) {
+                    normalAmt = 0;
                     holder.routePrice.setText(" " + normalAmt);
                     getRideAmtTextColor(holder.routePrice, routePriceDataList.get(position).routeAmount, normalAmt);
                 }

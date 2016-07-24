@@ -41,6 +41,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.mbarc.palinroam.R;
+import com.mbarc.palinroam.activities.AddingNewCarActivity;
 import com.mbarc.palinroam.activities.FindRideActivity;
 import com.mbarc.palinroam.activities.ListOfRideActivity;
 import com.mbarc.palinroam.activities.WelcomePage;
@@ -260,6 +261,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
+            startActivity(new Intent(getActivity(), AddingNewCarActivity.class));
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
@@ -298,7 +300,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
                     if(errorCode.equalsIgnoreCase("0")){
                         Utils.showProgress(false, getActivity(), mProgressView, mLoginFormView);
-                        manager.setPreferences(getActivity(), "status", "1");
+                         manager.setPreferences(getActivity(), "status", "1");
                         String status=manager.getPreferences(getActivity(),"status");
                         sharedPreferences =getActivity().getSharedPreferences(Constants.GET_USER_PROFILE, Context.MODE_PRIVATE);
                         editor = sharedPreferences.edit();

@@ -3,6 +3,14 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password </string>
+    <string name="first_name">First name </string>
+    <string name="last_name">Last name </string>
+    <string name="gender_text">Gender </string>
+    <string name="date_of_birth_text">Date of birth </string>
+    <string name="address">Address </string>
+    <string name="enter_address">Enter your address </string>
+    <string name="country">Country </string>
+    <string name="pincode">Pincode </string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Login</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -43,6 +51,7 @@
     <string name="find_ride_search_button">Search</string>
     <string name="find_ride_going_to">Going to</string>
     <string name="findride_text">FIND RIDE</string>
+    <string name="stop_over_hint">Stop-Over points </string>
     <string name="offerride_text">OFFER RIDE</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
@@ -173,10 +182,21 @@
     <string name="both_text">Both</string>
     <string name="seat_text">Seat</string>
     <string name="ride_certainity_text">Ride Certainity</string>
-    <string name="cancellation_mode_text">Cancellation Mode</string>
+    <string name="cancellation_mode_text">Cancellation Policy</string>
     <string name="strict_text">Strict</string>
     <string name="modurate_text">Modurate</string>
     <string name="easy_text">Easy</string>
     <string name="demo_route">Chennai to \n Madurai</string>
     <string name="agreement_text">I have agreed to the terms and conditions</string>
+    <string name="title_activity_adding_new_car">AddingNewCarActivity</string>
+
+    <!-- Add car Details text... -->
+    <string name="car_make_text">Make</string>
+    <string name="car_model_text">Model</string>
+    <string name="car_color_text">Color</string>
+    <string name="car_comfort_text">Comfort</string>
+    <string name="car_seats_text">Available seat</string>
+    <string name="wifi_text">Wi-fi</string>
+    <string name="fuel_type_text">Fuel type</string>
+    <string name="vehicle_number_text">Vehicle Number</string>
 </resources>

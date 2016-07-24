@@ -39,18 +39,11 @@ public class AddCarActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
         addCar.setLayoutManager(new LinearLayoutManager(this));
         AddCarListAdapter addCarListAdapter = new AddCarListAdapter(AddCarActivity.this,fill_with_dummy_data());
         addCar.setAdapter(addCarListAdapter);
         addCarListAdapter.notifyDataSetChanged();
-
-
-
-
     }
-
-
     public List<AddCarData> fill_with_dummy_data() {
 
         List<AddCarData> addCarDatas = new ArrayList<>();

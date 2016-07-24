@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
     <!-- offer ride progress -->
     <ProgressBar
@@ -28,164 +28,185 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@color/black"
-                android:paddingTop="5dp"
-                android:layout_height="wrap_content">
+                android:orientation="horizontal">
 
-                <AutoCompleteTextView
-                    android:id="@+id/offer_ride_leave_from"
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/find_ride_leave_from"
-                    android:background="@null"
-                    android:padding="10dp"
-                    android:drawableLeft="@mipmap/sourcemapicon"
-                    android:drawablePadding="5dp"
-                    android:textColor="@color/icons"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:visibility="gone"
-                android:background="@color/black"
-                >
+                    android:paddingTop="5dp">
 
-                <AutoCompleteTextView
-                    android:id="@+id/going_via_edittext"
+                    <AutoCompleteTextView
+                        android:id="@+id/offer_ride_leave_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/sourcemapicon"
+                        android:drawablePadding="5dp"
+                        android:hint="@string/find_ride_leave_from"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/icons" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/find_ride_going_to"
-                    android:background="@null"
-                    android:padding="10dp"
-                    android:textColor="@color/icons"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:padding="13dp"
+                    android:src="@mipmap/currentlocationicon"
+                    />
+            </LinearLayout>
+
+
 
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:paddingTop="5dp"
                 android:background="@color/black"
-                >
+                android:paddingTop="5dp">
 
                 <AutoCompleteTextView
                     android:id="@+id/offer_ride_going_to"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/find_ride_going_to"
                     android:background="@null"
-                    android:padding="10dp"
                     android:drawableLeft="@mipmap/desmapicon"
                     android:drawablePadding="5dp"
-                    android:textColor="@color/icons"
+                    android:hint="@string/find_ride_going_to"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/icons" />
             </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/black"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/offer_ride_stopover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/stop_over_hint"
+                    android:drawableLeft="@mipmap/stopoverpointicon"
+                    android:drawablePadding="5dp"
+                    android:inputType="textPostalAddress"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/icons" />
+            </android.support.design.widget.TextInputLayout>
+
             <LinearLayout
+                android:id="@+id/list_of_place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="2dp"
-                android:visibility="gone"
-                android:id="@+id/list_of_place"
-                ></LinearLayout>
+                android:orientation="horizontal"
+                >
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/adding_stopover_list"/>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="2dp"
-               android:background="@color/black"
-                >
+                android:background="@color/black"
+                android:orientation="horizontal">
+
                 <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/round_trip_checkbox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:padding="10dp"
-                    android:id="@+id/round_trip_checkbox"
                     android:text="@string/offer_ride_returntrip_text"
                     android:textColor="@color/icons"
                     android:textSize="18sp"
-                    app:buttonTint="@color/icons"
-                    />
+                    app:buttonTint="@color/icons" />
             </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="2dp"
-    android:orientation="horizontal">
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:background="@color/black">
-
-                <EditText
-                    android:id="@+id/offer_ride_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:padding="10dp"
-                    android:drawableLeft="@mipmap/calendericon"
-                    android:drawablePadding="5dp"
-                    android:background="@null"
-                    android:textColor="@color/icons"
-                    android:hint="@string/dep_date"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="date"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="185dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:paddingTop="5dp"
-        android:background="@color/black">
-
-        <EditText
-            android:id="@+id/offer_ride_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:padding="10dp"
-            android:background="@null"
-            android:drawableLeft="@mipmap/clockicon"
-            android:drawablePadding="5dp"
-            android:textColor="@color/icons"
-            android:hint="@string/time"
-            android:imeOptions="actionUnspecified"
-            android:inputType="time"
-            android:maxLines="1"
-            android:singleLine="true" />
-
-    </android.support.design.widget.TextInputLayout>
-
-
-
-</LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:id="@+id/return_timing_layout"
-                android:visibility="gone"
                 android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:paddingTop="5dp">
+
+                    <EditText
+                        android:id="@+id/offer_ride_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/calendericon"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/dep_date"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="date"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/icons" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/black"
+                    android:paddingTop="5dp">
+
+                    <EditText
+                        android:id="@+id/offer_ride_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/clockicon"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/time"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="time"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/icons" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/return_timing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="180dp"
@@ -196,17 +217,17 @@
                         android:id="@+id/offer_ride_return_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:padding="10dp"
-                        android:drawablePadding="5dp"
                         android:background="@null"
-                        android:textColor="@color/icons"
-                        android:hint="@string/return_date"
                         android:drawableLeft="@mipmap/calendericon"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/return_date"
                         android:imeOptions="actionUnspecified"
                         android:inputType="date"
                         android:maxLines="1"
-                        android:singleLine="true" />
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/icons" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -220,17 +241,17 @@
                         android:id="@+id/offer_ride_return_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:padding="10dp"
                         android:background="@null"
-                        android:textColor="@color/icons"
-                        android:hint="@string/time"
                         android:drawableLeft="@mipmap/clockicon"
                         android:drawablePadding="5dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/time"
                         android:imeOptions="actionUnspecified"
                         android:inputType="time"
                         android:maxLines="1"
-                        android:singleLine="true" />
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/icons" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -241,11 +262,11 @@
                 android:id="@+id/offer_ride_next_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
-                android:background="@color/tab_indicator_color"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:textColor="@color/icons"
+                android:layout_marginTop="40dp"
+                android:background="@color/tab_indicator_color"
                 android:text="@string/offerride_next_button"
+                android:textColor="@color/icons"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

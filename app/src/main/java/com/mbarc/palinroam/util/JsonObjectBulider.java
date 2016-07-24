@@ -53,4 +53,23 @@ public class JsonObjectBulider {
         }
         return errorJsonObj;
     }
+    public static JSONObject postRideRequest(String userId,String SourceLocation ,String Destination,Boolean Roundtrip,String DepartureDateTime,String ReturnDateTime,String PreferedCoPassenger,int NoOfSeats,String Luggage,String RideCertainity,String CancellationPolicy ){
+        JSONObject postRequestParams=new JSONObject();
+        try {
+            postRequestParams.put("userId",userId);
+            postRequestParams.put("SourceLocation",SourceLocation);
+            postRequestParams.put("Destination",Destination);
+            postRequestParams.put("Roundtrip",Roundtrip);
+            postRequestParams.put("DepartureDateTime",DepartureDateTime);
+            postRequestParams.put("ReturnDateTime",ReturnDateTime);
+            postRequestParams.put("PreferedCoPassenger",PreferedCoPassenger);
+            postRequestParams.put("NoOfSeats",NoOfSeats);
+            postRequestParams.put("Luggage",Luggage);
+            postRequestParams.put("RideCertainity",RideCertainity);
+            postRequestParams.put("CancellationPolicy",CancellationPolicy);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return postRequestParams;
+    }
 }

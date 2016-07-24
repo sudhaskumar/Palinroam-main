@@ -68,12 +68,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:id="@+id/co_passanger_group"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/male_text"
+                        android:id="@+id/male_passaenger_button"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
 
@@ -81,6 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:id="@+id/female_passanger_button"
                         android:text="@string/female_text"
                         android:textColor="@color/icons"
                         app:backgroundTint="@color/icons"
@@ -91,6 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="@string/both_text"
+                        android:id="@+id/both_button"
                         android:textColor="@color/icons"
                         app:backgroundTint="@color/icons"
                         app:buttonTint="@color/icons" />
@@ -141,9 +145,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="right">
-                    </LinearLayout>
+                    android:gravity="end|center">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/seat_minus_button"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/minusicon"/>
+                    <com.mbarc.palinroam.views.RobotoTextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tab_indicator_color"
+                        android:textSize="19sp"
+                        android:gravity="center"
+                        android:id="@+id/no_of_seat_text"
+                        android:text="1"/>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/seat_plus_button"
+                        android:src="@mipmap/plusicon"/>
                 </LinearLayout>
+
+            </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp" />
@@ -163,8 +188,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:orientation="horizontal"
                         android:gravity="right">
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:id="@+id/luggage_spin"
+                            />
                     </LinearLayout>
                     </LinearLayout>
 
@@ -211,12 +243,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:id="@+id/ride_certian_group"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/high"
+                        android:id="@+id/high_certian_button"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
 
@@ -224,6 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:id="@+id/medium_certian_button"
                         android:text="@string/medium"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
@@ -233,6 +268,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="@string/low"
+                        android:id="@+id/low_certian_button"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
                 </RadioGroup>
@@ -257,12 +293,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:id="@+id/policy_group"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/strict_text"
+                        android:id="@+id/strict_policy_button"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
 
@@ -271,6 +309,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="@string/modurate_text"
+                        android:id="@+id/modurate_policy_button"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
 
@@ -279,6 +318,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="@string/easy_text"
+                        android:id="@+id/easy_policy_button"
                         android:textColor="@color/icons"
                         app:buttonTint="@color/icons" />
                 </RadioGroup>
@@ -287,6 +327,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:id="@+id/agree_checkbox"
                 android:layout_marginTop="10dp"
                 app:buttonTint="@color/icons"
                 android:textColor="@color/icons"
